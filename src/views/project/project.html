@@ -1,0 +1,30 @@
+<div>
+  <div class='title-containter'>
+    <b class='title'>{{project.project}}</b>
+  </div>
+  <div class='center'>
+    <b>{{project.date}}</b>
+  </div>
+  <label>Organization:</lable>
+  {{project.org}}
+  <br>
+  <a target='_blank' href='{{project.link}}'>Repository</a>
+  <br>
+  <br>
+  <label>Short Description:</label>
+  <br>
+  {{project.desc}}
+  <br>
+  <span>
+    <span class='techs' ng-repeat='tech in project.techs'>
+      <b ng-click='techInfoToggle(tech)'>{{tech}}</>
+    </span>
+    <div ng-if='showTechInfo'>
+      <ng-include src='"/resources/html/techs/" + techFilename + ".html"'></ng-include>
+    </div>
+  </span>
+  <br>
+  <div class='large-text-body'>
+    <ng-include src='"/resources/html/projects/" + filename + ".html"'></ng-include>
+  </div>
+<div>

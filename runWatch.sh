@@ -13,10 +13,16 @@ do
 		if [ "$serverNotRunning" ]; then
 			vpnIp=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
 			gnome-terminal -e "npm run start $vpnIp"
-			echo "<a href="http://$vpnIp:8080">Go</a>" > siteLink.html
+			echo "# aboutMe\n<a href='http://$vpnIp:8080' target='_blank'>Go To Application</a>\n<br>\n" > ./readme/1_header.md
+			cat ./readme/* > README.md
+			sleep 5
+			git add ./README.md
+			git commit -m "Automated Project Url Update"
+			git push origin master
 		fi
 	else
 		echo "disconnected"
+		sudo kill $(sudo lsof -t -i:8080)
 		purevpn -c
 	fi
 	sleep 20

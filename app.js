@@ -1,29 +1,41 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import { genSrvc } from './src/services/genSrvc';
+import { navbar } from './src/directives/navbar';
 
-import { genDir } from './src/directives/genDir';
+import { projectsSrvc } from './src/services/projectsSrvc';
 
-import { helloCtrl } from './src/views/hello/hello';
-import { goodbyeCtrl } from './src/views/goodbye/goodbye';
+import { homeCtrl } from './src/views/home/home';
+import { inspirationCtrl } from './src/views/inspiration/inspiration';
+import { otherCtrl } from './src/views/other/other';
+import { programmingCtrl } from './src/views/programming/programming';
+import { projectCtrl } from './src/views/project/project';
 
+const ctrls = {};
+ctrls.project = projectCtrl;
+ctrls.home = homeCtrl;
+ctrls.inspiration = inspirationCtrl;
+ctrls.other = otherCtrl;
+ctrls.programming = programmingCtrl;
 
-angular.module('routerApp', [uiRouter])
-  .service('genSrvc', genSrvc)
-  .directive('genDir', genDir)
-  .config(($stateProvider, $urlRouterProvider) => {
+const app = angular.module('routerApp', [uiRouter])
+  .directive('navbar', navbar)
+  .service('projectsSrvc', projectsSrvc);
+
+function buildViews($stateProvider, $urlRouterProvider) {
+  const ctrlKeys = Object.keys(ctrls);
+  for (let index = 0; index < ctrlKeys.length; index += 1) {
+    const key = ctrlKeys[index];
     $stateProvider
-    .state('hello', {
-      url: '/hello',
-      templateUrl: 'src/views/hello/hello.html',
-      controller: helloCtrl,
-    })
-    .state('goodbye', {
-      url: '/goodbye',
-      templateUrl: 'src/views/goodbye/goodbye.html',
-      controller: goodbyeCtrl,
-    });
+      .state(`${key}`, {
+        url: `/${key}`,
+        templateUrl: `src/views/${key}/${key}.html`,
+        controller: ctrls[key],
+      });
+  }
 
-    $urlRouterProvider.otherwise('/hello');
-  });
+  $urlRouterProvider.otherwise('/home');
+}
+
+
+app.config(buildViews);

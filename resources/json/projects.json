@@ -1,0 +1,188 @@
+[{
+    "project": "Chess_Game",
+    "org": "UIUC - cs242",
+    "techs": [
+      "Java",
+      "Eclipse"
+    ],
+    "desc": "Chess game written in java, also created a game called war width similar rules but custom pieces and range attacks",
+    "date": "01/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment1.2"
+},{
+    "project": "airline flight finder",
+    "org": "UIUC - cs242",
+    "techs": [
+      "ruby",
+      "RubyOnRails"
+    ],
+    "desc": "Find fastes shortest and cheapest flights using priority queue",
+    "date": "02/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment2.1"
+},{
+    "project": "Svn_portfolio",
+    "org": "UIUC - cs242",
+    "techs": [
+      "php",
+      "html",
+      "javascript",
+      "jquery",
+      "mysql",
+      "PhpStrom"
+    ],
+    "desc": "Portfolio, my first attempt at a web application.",
+    "date": "03/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment3.2"
+},{
+    "project": "ContraClone",
+    "org": "UIUC - cs242",
+    "techs": [
+      "C#",
+      "Unity",
+      "MonoDevelope"
+    ],
+    "desc": "A clone of the regular nintendo game contra. Including a level builder",
+    "date": "04/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment4.1/ContraClone"
+},{
+    "project": "Numerical Analysis",
+    "org": "UIUC - cs450",
+    "techs": [
+      "Python",
+      "Latex"
+    ],
+    "desc": "Aproximating data to a function using various methods, and analizing accuracy and efficiency",
+    "date": "04/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs450"
+},{
+    "project": "Systems Programming",
+    "org": "UIUC - cs241",
+    "techs": [
+      "C"
+    ],
+    "desc": "Was introduced to alot of things in this course. Pipes, local network communication, epoll, forking procdesses, threading/race conditions...",
+    "date": "04/18/2016",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs241"
+},{
+    "project": "Data Structures",
+    "org": "UIUC - cs225",
+    "techs": [
+      "C++"
+    ],
+    "desc": "This class covered various basic object oriented concepts, with a focus on data structures",
+    "date": "08/18/2015",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs225"
+},{
+    "project": "Introduction to Computer Science",
+    "org": "UIUC - cs125",
+    "techs": [
+      "Java",
+      "Eclipse"
+    ],
+    "desc": "Introductory to bascs of object oriented programming.",
+    "date": "03/18/2015",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs125"
+},{
+    "project": "MyWeekend",
+    "org": "UIUC - honors elective",
+    "techs": [
+      "Java",
+      "XML",
+      "Android",
+      "Eclipse"
+    ],
+    "desc": "My type of social media... an app more geared towards getting you off your phone.",
+    "date": "03/18/2015",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/MyWeekend"
+},{
+    "project": "fileTool",
+    "org": "Aetna - personal",
+    "techs": [
+      "Java"
+    ],
+    "desc": "A tool for reading and validating property files for detecting config problems. This was created before I leanred to use grep.",
+    "date": "15/08/2015",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/fileTool"
+},{
+    "project": "DaytonProject",
+    "org": "Dayton",
+    "techs": [
+      "C",
+      "Python"
+    ],
+    "desc": "This program was intended to read the freight data for the shipping company I worked for. And generate a dock layout plan.",
+    "date": "15/12/2017",
+    "link": "https://github.com/jozsefmorrissey/Dayton_Project"
+},{
+    "project": "SqLazy",
+    "org": "Aetna - personal",
+    "techs": [
+      "Java",
+      "Ant",
+      "Maven",
+      "javapoet",
+      "JUnit"
+    ],
+    "desc": "A tool to read existing java classes with hard coded queries and generate beans, daos, and interfaces. Too ease the transition from poor/no standards to a spring compatable standard.",
+    "date": "15/12/2017",
+    "link": "https://github.com/jozsefmorrissey/SqLazy"
+},{
+    "project": "First Programming Class",
+    "org": "Lake Land",
+    "techs": [
+      "C"
+    ],
+    "desc": "The programs found in this repo will show how quickly I grasped the power of programming. Its taking me longer to learn to control then power.",
+    "date": "15/12/2013",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/Lake%20Land"
+},{
+    "project": "PartTraker",
+    "org": "Planks",
+    "techs": [
+      "Java",
+      "SQL"
+    ],
+    "desc": "A part/information tracker for a wood shop I worked for. Not sure how far I got... Wish I would have known Spring Framework at the time.",
+    "date": "15/01/2017",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/PartTracker"
+},{
+    "project": "PracticeCar",
+    "org": "Reviture",
+    "techs": [
+      "Java",
+      "Doxygen"
+    ],
+    "desc": "Inheritance dream, I wish they would of had us do this in school. I did not truely understand inheritance until I tried to buid a car.",
+    "date": "15/02/2017",
+    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/PracticeCar"
+},{
+    "project": "AboutMe",
+    "org": "personal",
+    "techs": [
+      "javascript",
+      "angularJS",
+      "Node",
+      "npm",
+      "html",
+      "jQuery",
+      "Webpack",
+      "Bable",
+      "Bash"
+    ],
+    "desc": "Your looking at it. A portfolio application hosted on my own computer. Proteted by pureVpn with a bash script that monitors and repairs the vpn connection",
+    "date": "15/07/2018",
+    "link": "https://github.com/jozsefmorrissey/aboutMe"
+},{
+    "project": "CharacterBuilderJava",
+    "org": "Personal",
+    "techs": [
+      "Java",
+      "SpringBoot",
+      "SpringMvc",
+      "SpringAop",
+      "SQL",
+      "JUnit"
+    ],
+    "desc": "Only have the backend mostly finished. I'm sure it is difficult to tell from the code base, but the end goal is to turn life into a video game.",
+    "date": "15/09/2018",
+    "link": "https://github.com/jozsefmorrissey/CharacterBuilderJava"
+}]

@@ -1,0 +1,18 @@
+.project-title {
+  justify-content: left;
+  text-align: left;
+}
+
+.orginization {
+  display: inline-block;
+}
+
+.date {
+    text-align: right;
+}
+
+.description {
+  display: inline-block;
+  text-align: left;
+  min-width: 100%;
+}

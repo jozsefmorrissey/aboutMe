@@ -1,0 +1,53 @@
+<div>
+  <link rel='stylesheet' href='/src/views/programming/style.css'>
+
+  <div class='center'>
+    <lable>Search</label>
+    <input type='text'/>
+  </div>
+  <div class='center'>
+    <span>
+      <label>All</label>
+      <input id='all-filter' ng-click='clickedAll()' checked type='checkbox' class='search-filter'>
+    </span>
+    <span ng-repeat='filter in filters'>
+      <label>{{filter}}</label>
+      <input ng-click="uncheckAll()" checked type='checkbox' class='search-filter'>
+    </span>
+  </div>
+  <br>
+  <br>
+  <div class='center'>
+      <div class='list-item' ng-repeat='prog in displayPrograms'>
+          <span class='tech-container'>
+            <span class='techs' ng-repeat='tech in prog.techs'>{{tech}}</span>
+          </span>
+          <span class='inner-list-container'>
+            <div class='list-header'>
+              <span class='upper-left'>
+                <div class='project-title'>
+                  <label><b>Project:</b></label>
+                  <a ng-click='setProject($index)'
+                    ui-sref="project">
+                    {{prog.project}}
+                  </a>
+                </div>
+                <div class='orginization'>
+                  <label><b>Orginization:</b></label>
+                  {{prog.org}}
+                </div>
+              </span>
+              <span class='upper-right'>
+                <div class='date'>
+                  {{prog.date}}
+                </div>
+              </span>
+            </div>
+            <br>
+            <div class='description'>
+              {{prog.desc}}
+            </div>
+          </span>
+      </div>
+    </div>
+<div>
