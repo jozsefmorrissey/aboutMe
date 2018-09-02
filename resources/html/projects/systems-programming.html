@@ -1,1 +1,82 @@
-systems-programming
+<div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>
+
+    </b>
+    <div ng-if='show'>
+
+    </div>
+  </div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>
+
+    </b>
+    <div ng-if='show'>
+
+    </div>
+  </div>
+
+  <div ng-controller='encryptionCtrl'>
+    <b class='expand' ng-click='show = !show'>
+      Et_tu_brute[link] & password_cracker
+    </b>
+    <div ng-if='show'>
+      <div class='center'>
+        <div class='button' ng-click='encrypt("et-tu-brute")'>Encrypted</div>
+        <span>{{getPosition('et-tu-brute')}}</span>
+        <div class='button' ng-click='decrypt("et-tu-brute")'>Decrypt</div>
+      </div>
+      <div id='et-tu-brute' position='0' pass-phrase='He110 W0r1d'>
+        These are very simple encryption and password breaking programs.
+        Encrypting messages is a fun thing to think about. Turing was able to
+        break the germans code because they got their hands on enigma and they
+        knew a small phrase that was in each message. Decoding any part of the
+        message would result in decoding the whole message. In retrospect if they
+        would have double encoded the messages. Turing would have failed since the
+        first decoding would be just as encrypted as the original message.
+      </div>
+    </div>
+  </div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>
+      malloc[link]
+    </b>
+    <div ng-if='show'>
+      I found out that I can’t have my cake and eat it too. I spent over a week creating an application that sorted memory allocations by size required. Creating blocks of memory for bits < 16, 32, 64, 128, 256,... they blocks would be placed in the smallest existing block that they fit as long as they size remaining was a block itself or create a new one. It was very good at reducing memory fragmentation but it was not fast enough to pass the tests. In a rush I tried to throw another implementation together and ended up failing 75% of the tests…. I should have thought through the potential costs of focusing solely on memory conservation. However, I think my program could work if I created a sorted memory location lookup array that could be binary searched. A n to log(n) speed up is a massive difference for large structures which is where my concept failed.
+    </div>
+  </div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>
+      mapreduce[link]
+    </b>
+    <div ng-if='show'>
+      At the time I did not really understand the utility of mapreduce. After spending lots of time normalizing database schemas and using non normalized databases. It is clear this concept is created for quick access, searching, and modification of files.
+    </div>
+  </div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>
+      overworked_interns[link ] scheduler[link] ttt_threads[link] two_to_tango[link]
+    </b>
+    <div ng-if='show'>
+      Threading is challenging and fun. Creating an effective division of labor within a program or collaborative programs is not a straightforward problem. You need to know the load on various areas of the application. How much cached memory is required for a thread to operate within those areas. These values change based on the time day month year, so an effective thread allocation has to be changed dynamically. I think distributed systems is a far simpler method of minimizing context switching. The dispatching server can simply throw the same type of jobs to a given server whenever a server exists and is not overloaded. If no server exists simply choose the server with the lightest load.
+      <br>
+      <br>
+      With treading comes race conditions. Writing a program that is able to efficiently share resources can be as hard as predicting the weather. Knowing how long a job requires the resource, what other resources are required, and who will be using or needing them. If there are a high number of jobs that are interdependent on one another this can become impossible. To create a good solution jobs need to be as specialized and isolated as possible. This is done by minimizing lock times and ensuring read only processes carry a copy of the read value and do not lock the resource.
+    </div>
+  </div>
+
+  <div ng-controller='dummyCtrl'>
+    <b class='expand' ng-click='show = !show'>What_the_shell</b>
+    <div ng-if='show'>
+      A basic linux shell. After creating a really basic shell, I wanted to create a complex implementation that easily supported custom commands. Custom commands are fairly easy with linux and even bash terminals. It should be as easy as “newCmd launchPortfolio -s ./RUN.sh”, this would find the absolute path of RUN.sh add it to the startup commands and attach a terminal alias launchPortfolio to the script. Now I think if I spend a day or two, I could write a newCmd.sh. This highlights my greatest weakness as a programmer. I would rather build my own shell then learn to modify the existing one. The only reason I have learned a fair amount about scripting is because I spent about 8 months working in an environment where batch files and powershell scripts were the only programming languages I could work with, outside of the applications.
+      <br>
+      <br>
+      I also wanted to create my own ssh style server. After I created this shell I knew it would be fairly simple to use sockets to make my terminal available to other computers. It is probably a good thing, but I failed to figure out how to bypass my internet providers firewall. Since I have little to no knowledge of how to secure a connection It is probably for the best that the world does not have access to my computer. That being said the application you are using now is available to the world, but being an angular application. They only have access to the given endpoints and all my logic, however flawed is on the client's side. There does not appear to be any vulnerabilities in this application, other than those inherent to node.
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<map id="FuelSystemParts.Tank" name="FuelSystemParts.Tank">
+<area shape="rect" id="node2" href="$classCars_1_1ContainerPart.html" title="Cars.ContainerPart" alt="" coords="91,323,225,349"/>
+<area shape="rect" id="node3" href="$classCars_1_1CarPart.html" title="Cars.CarPart" alt="" coords="109,247,207,273"/>
+<area shape="rect" id="node4" href="$interfaceInterfaces_1_1System.html" title="Interfaces.System" alt="" coords="11,5,140,32"/>
+<area shape="rect" id="node6" href="$classCars_1_1ElectronicSystem.html" title="Cars.ElectronicSystem" alt="" coords="135,81,293,108"/>
+<area shape="rect" id="node5" href="$classCars_1_1Car.html" title="Cars.Car" alt="" coords="135,157,210,184"/>
+<area shape="rect" id="node7" href="$interfaceInterfaces_1_1Electronic.html" title="Interfaces.Electronic" alt="" coords="164,5,307,32"/>
+<area shape="rect" id="node8" href="$enumEnums_1_1PartCatagory.html" title="Enums.PartCatagory" alt="" coords="234,157,378,184"/>
+<area shape="rect" id="node9" href="$interfaceInterfaces_1_1Container.html" title="Interfaces.Container" alt="" coords="232,247,372,273"/>
+</map>

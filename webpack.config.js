@@ -5,7 +5,8 @@ const path = require('path');
 
 const config = {
   context: path.join(__dirname),
-  devtool: 'cheap-eval-source-map',
+  devtool: 'cheap-module-source-map',
+  // devtool: 'cheap-eval-source-map',
   entry: './app',
   output: {
     path: path.join(__dirname),

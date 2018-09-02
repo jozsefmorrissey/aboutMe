@@ -1,0 +1,10 @@
+<map id="Cars.ElectronicPart" name="Cars.ElectronicPart">
+<area shape="rect" id="node5" href="$classFuelSystemParts_1_1Pump.html" title="FuelSystemParts.Pump" alt="" coords="567,5,729,32"/>
+<area shape="rect" id="node6" href="$classIgnitionParts_1_1Computer.html" title="IgnitionParts.Computer" alt="" coords="570,56,726,83"/>
+<area shape="rect" id="node7" href="$classIgnitionParts_1_1IgnitionSwitch.html" title="IgnitionParts.IgnitionSwitch" alt="" coords="557,107,739,133"/>
+<area shape="rect" id="node8" href="$classIgnitionParts_1_1Starter.html" title="IgnitionParts.Starter" alt="" coords="579,157,717,184"/>
+<area shape="rect" id="node9" href="$classPowerTrainParts_1_1Motor.html" title="PowerTrainParts.Motor" alt="" coords="570,208,726,235"/>
+<area shape="rect" id="node2" href="$classCars_1_1CarPart.html" title="Cars.CarPart" alt="" coords="205,81,303,108"/>
+<area shape="rect" id="node3" href="$interfaceInterfaces_1_1System.html" title="Interfaces.System" alt="" coords="5,81,135,108"/>
+<area shape="rect" id="node4" href="$interfaceInterfaces_1_1Electronic.html" title="Interfaces.Electronic" alt="" coords="183,132,325,159"/>
+</map>

@@ -1,1 +1,7 @@
 Personal website hosted from my computer protected by [PureVPN](https://www.purevpn.com/pages/home.php)
+Can't guarantee the link will work my vpn has to be running, and it causes my
+computer to lag sometimes and I have to shut it down.
+<br>
+<br>
+The application is not finished, so please don't be too critical about the
+content.

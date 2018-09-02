@@ -1,0 +1,282 @@
+<div>
+  <b>A very simple encryption/dycryption algorithm</b>
+  <p>
+    I have always wanted to make my own encryption/dycryption algorithm. While
+    constructing this site I took a day to do just that. I want to
+    mathematically determine the difficulty of breaking my code I dont know if
+    I will ever get to it, but if I do it will be located
+    <a target='_blank' href='https://www.sharelatex.com/read/prsyxnxgvxtw'>
+      here</a>.
+    For now you can atleast see a formula expression for the values created by
+    my algorithm.
+  </p>
+  <p>
+    The algorithm uses the pass phrase and shifts the letter according to the
+    integer value of that character. The integer values are added as the program
+    moves down the string.
+    <p>
+      For example (overly simplified):
+      <br>
+      <p class='indent'>
+        PassPhrase = abc
+        <br>
+        Shifts = 1, 1+2=3, 1+2+3=6, 1+2+3+1=7, 1+2+3+1+2=9
+        <br>
+        Hello = Ihrsx
+        <br>
+        Help = Ihrs if shifts = 1,2,3,3 and password = abcc
+      </p>
+    </p>
+  </p>
+  <div draw-bridge cap-color='brown'>
+    <div class='center clickable'>
+      <b>Vulnerabilities</b>
+    </div>
+    <div>
+      <br>
+      <div class='indent'>
+        <b>Chinese</b>
+        <div class='indent'>
+          <p>
+            Allowing any ascii characters could alow a cleaver person to pin down
+            A range for each character severly limiting the number of
+            possibilities. Allowing a brute force method to become much easier.
+            <br>
+            <br>
+            Severity - could be exploited
+            <br>
+            This really only effects messages with short pass phrases. The longer the
+            password the more possible passPhrases.
+            <br>
+            <br>
+            Resolution
+            <br>
+            Create a language map and use the map to detemine the shifted value.
+            With confined map any character could be any other character.
+            Maximizing the number of possibilites for a known language message.
+          </p>
+        </div>
+          <p><b>
+            Known Starting Location
+          </p></b>
+          <div class='indent'>
+            <p>
+              The starting location is at the end of the string. It is hard coded in
+              the algorithm. This was a choice that allowed the 'bread crumbs' to be
+              placed at the beginning of an encoded message without affecting a
+              sucsessive encoding. Knowing where the endoding starts means you could
+              write a formula similar to:
+              <br>
+              <div class='flex-center'>
+                <p class='left'>
+                  n = number of possible characters in message ~ 52 for engilsh
+                  <br>
+                  0 < ai < n
+                  <br>
+                  mi=message character
+                  <br>
+                  ei=encoding character
+                  <br>
+                  e1=m1+a1
+                  <br>
+                  e2=m2+a1+a2
+                  <br>
+                  e3=m3+a1+a2+a3
+                  <b><br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;</b>
+                  <br>
+                </p>
+              </div>
+            </p>
+            <p>
+              Severity - could be exploited
+              <br>
+              The number of possibilities with this vulnerability is n^pl(pass
+              phrase length). For a pass phrase of length 5 this number is ~ 380
+              million. Which is pretty good for encrypting you message with Hello.
+              Hello world! is ~ 10^20 possibilities. Athough I would not recommend
+              using commen every day words. This vulnerability is not very severe
+              as with most algorithms it is only as strong as its password. However,
+              it can be slightly improved.
+            </p>
+            <p>
+              Resolution
+              <br>
+              By randomizing the start location a1 would no longer fit the
+              relationship 0 < a1 < n. It would essentially be 0 < a1 < &infin;.
+              The start point could be calculated based of of the passphrase (i.e.
+              binary search location based off of the keyCode being even or odd).
+            </p>
+          </p>
+        </div>
+        <b>Short Cuts</b>
+        <div class='indent'>
+          <p>
+            The following pass phrases are equal:
+            <div class='flex-center'>
+              <p class='left'>
+                a = aa = aaa = aaaa...
+                <br>
+                12 = 1212 = 121212 = 12121212...
+                <br>
+                1221 = 12211221 = 122112211221...
+              </p>
+            </div>
+            <br>
+            <br>
+            Severity - not a concern
+            <br>
+            Any dissymetry in the password will only cause equality with larger
+            pass phrases. For aaaaa1aaaa, this is only equivalent to
+            aaaaa1aaaaaaaaa1aaaa, and other more difficult passwords. I have no
+            pitty for you if your password is 1212.
+            <br>
+            <br>
+            Resolution
+            <br>
+            If I wanted to fix this, a hash code could be created that represents
+            substrings. Using an 'interlaced concatination'(This isnt a real
+            thing, just some what describes the process see below.) of all the
+            hash code maps to create the shift map.
+            <div class='flex-center'>
+              <p class='left'>
+                map0 = hashCode('a')
+                <br>
+                map1 = hashCode('aa')
+                <br>
+                map2 = hashCode('aaa')
+                <br>
+                <b><br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;</b>
+                <br>
+                micx = mapi character at x
+                <br>
+                N = length of a hashCode
+                <br>
+                shiftMap = m0c0 + m1c0 + ... + mNc0 + m0c1 + m1c1 + ... + mNc1 + ...
+              </p>
+            </div>
+            If the has codes are not interlaced this would allow someone to
+            decode N characters simply by guessing the first character of the
+            message.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div draw-bridge cap-color='brown'>
+    <div class='center clickable'>
+      <b>What I Learned</b>
+    </div>
+    <div class='indent'>
+      If I were to make a more secure version, it would be similar to the
+      following formulas. (Sorry for the formatting, I need to learn a
+      javascript version of LaTex/Tex);
+      <div class='flex-center'>
+        <p class='left'>
+          characterMap = an array of all alowed characters in a given message.
+          <br>
+          x[i] = character at i of string x
+          <br>
+          M = max length for given string
+          <br>
+          msg = string to be encoded, comprised of characters within the character Map.
+          <br>
+          0 < si = start index < msg.length
+          <br>
+          pass = string comprised of characters within the character Map.
+          <br>
+          ps(i) = pass substring starting at 0 and ending at i inclusive. (i.e. for abc m(0)='a' && m(1)='ab' m(2)='abc')
+          <br>
+          map(i) = hashCode(ps(i)) - hash code will only have characters from the character map;
+          <br>
+          mc(i,x) = the index within the character map, of map(i) character at index x
+          <br>
+          N = number of maps - 1
+          <br>
+          sm = Shift Map = mc(0,0) + mc(1,0) + ... + m(N,0) + mc(0,1) + mc(1,1) + ... + mc(N, 1) + ...
+          <br>
+          m(i) = message character at index (si + i) % msg.length
+          <br>
+          e(i) = encoding character at index (si + i) % msg.length
+          <br>
+          sT =  sm[0] + sm[1] + sm[2] + ... + sm[M]
+          <br>
+          e(0) = sT + sm[0] + m[0]
+          <br>
+          e(1) = sT + sm[0] + sm[1] + m[1]
+          <br>
+          e(2) = sT + sm[0] + sm[1] + sm[2] + m[2]
+          <b><br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;<br>&nbsp;&nbsp;&nbsp;&bull;</b>
+        </p>
+      </div>
+      <p>
+        A breif explanation:
+        <ul>
+          <li>
+            Character Map: this pervents outsiders from knowing which
+            characters corresponds to which value.
+          </li>
+          <li>
+            Start Index: Knowing where the encoding begins is essential to
+            decoding it, therefore hiding this location is a good preventative
+            measure.
+          </li>
+          <li>
+            HashCode: If we simply use the numerical representation of a
+            letter, given the repetative nature of the algorithm, patturns
+            can form. A hash code by nature turns on value into what appears
+            to be random garbage. Again just a precaution that almost
+            completely dis associates the password letter for the influence
+            it has on the angorythm.
+          </li>
+          <li>
+            Shit Map: I call this process an 'interlaced concatination' since
+            it basically weaves all the hash maps together. Which means that
+            in order to decode any x + 0 through x + N characters, you must
+            know a portion of every hash code. Since you do not know how long
+            the password is the size of N could be anything.
+          </li>
+        </ul>
+        I think I have, in theory made it as difficult as possible to decode
+        a message. Since there are, in english atleast ((((52)^52)^pl)^ml)
+        combinations (pl = pass phrase length, ml = message length). Since,
+        ((52)^ml) is the number of possibilites for the message itself. Unless
+        I have missed somthing. My 'theoretical' encryption is garbage to
+        anyone without the pass phrase/s, si, and character map.
+      </p>
+    </div>
+  </div>
+  Use Decryption to follow the bread crumbs or encrypt your own messages.
+
+  <div class='center'>
+    <div class='center'>
+      <button class='button' tabindex="0" ng-click='encrypt = true'>Encrypt</button>
+      <button class='button' tabindex="0" ng-click='encrypt = false'>Decrypt</button>
+    </div>
+    <br>
+    <div ng-show='encrypt'>
+      <div id='user-encrypt-multi' expandable-repeat='phrase in phrases'>
+        <label class=' slight-padding'>Pass Phrase</label>
+        <input class='pass-phrase'/>
+        <label class=' slight-padding'>Bread Crumnb</label>
+        <input class='bread-crumb'/>
+      </div>
+      <br>
+      <button class='button' tabindex="0" ng-click='encryptMulti("user-encrypt-multi", "user-encrypt-text")'>
+        Apply Encryption
+      </button>
+    </div>
+    <div ng-show='!encrypt'>
+      <label>Pass Phrase</label>
+      <input ng-model='passPhrase'/>
+      <button class='button' tabindex="0" ng-click='decrypt("user-encrypt-text")'>
+        Apply Decryption
+      </button>
+    </div>
+    <br>
+    <textarea id='user-encrypt-text' pass-phrase='{{passPhrase}}'
+        cols='90' rows='15' position='0'>
+
+    </textarea>
+  </div>
+
+<div>

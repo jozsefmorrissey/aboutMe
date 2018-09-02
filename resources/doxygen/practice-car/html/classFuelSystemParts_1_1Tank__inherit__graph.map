@@ -1,0 +1,6 @@
+<map id="FuelSystemParts.Tank" name="FuelSystemParts.Tank">
+<area shape="rect" id="node2" href="$classCars_1_1ContainerPart.html" title="Cars.ContainerPart" alt="" coords="69,155,204,181"/>
+<area shape="rect" id="node3" href="$classCars_1_1CarPart.html" title="Cars.CarPart" alt="" coords="69,80,167,107"/>
+<area shape="rect" id="node4" href="$interfaceInterfaces_1_1System.html" title="Interfaces.System" alt="" coords="9,5,139,32"/>
+<area shape="rect" id="node5" href="$interfaceInterfaces_1_1Container.html" title="Interfaces.Container" alt="" coords="192,80,332,107"/>
+</map>

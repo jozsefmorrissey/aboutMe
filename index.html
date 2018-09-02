@@ -17,8 +17,11 @@
   <!-- apply our angular app to our site -->
   <body ng-app="routerApp">
       <navbar></navbar>
-      <div id="body">
-        <div ui-view></div> <!-- angular content injected here  -->
+      <div class='side-by-side'>
+        <sidebar></sidebar>
+        <div id="body">
+          <div ui-view></div> <!-- angular content injected here  -->
+        </div>
       </div>
   </body>
 </html>

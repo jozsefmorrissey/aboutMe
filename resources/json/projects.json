@@ -3,7 +3,9 @@
     "org": "UIUC - cs242",
     "techs": [
       "Java",
-      "Eclipse"
+      "Eclipse",
+      "Doxygen",
+      "JUnit"
     ],
     "desc": "Chess game written in java, also created a game called war width similar rules but custom pieces and range attacks",
     "date": "01/18/2016",
@@ -19,26 +21,12 @@
     "date": "02/18/2016",
     "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment2.1"
 },{
-    "project": "Svn_portfolio",
-    "org": "UIUC - cs242",
-    "techs": [
-      "php",
-      "html",
-      "javascript",
-      "jquery",
-      "mysql",
-      "PhpStrom"
-    ],
-    "desc": "Portfolio, my first attempt at a web application.",
-    "date": "03/18/2016",
-    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/UIUC/cs242/Assignment3.2"
-},{
     "project": "ContraClone",
     "org": "UIUC - cs242",
     "techs": [
       "C#",
       "Unity",
-      "MonoDevelope"
+      "MonoDevelop"
     ],
     "desc": "A clone of the regular nintendo game contra. Including a level builder",
     "date": "04/18/2016",
@@ -92,7 +80,7 @@
     ],
     "desc": "My type of social media... an app more geared towards getting you off your phone.",
     "date": "03/18/2015",
-    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/MyWeekend"
+    "link": "https://github.com/Waggle-It/MyWeekend"
 },{
     "project": "fileTool",
     "org": "Aetna - personal",
@@ -135,16 +123,6 @@
     "date": "15/12/2013",
     "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/Lake%20Land"
 },{
-    "project": "PartTraker",
-    "org": "Planks",
-    "techs": [
-      "Java",
-      "SQL"
-    ],
-    "desc": "A part/information tracker for a wood shop I worked for. Not sure how far I got... Wish I would have known Spring Framework at the time.",
-    "date": "15/01/2017",
-    "link": "https://github.com/jozsefmorrissey/JunkDrawer/tree/master/PartTracker"
-},{
     "project": "PracticeCar",
     "org": "Reviture",
     "techs": [
@@ -168,7 +146,7 @@
       "Bable",
       "Bash"
     ],
-    "desc": "Your looking at it. A portfolio application hosted on my own computer. Proteted by pureVpn with a bash script that monitors and repairs the vpn connection",
+    "desc": "Your looking at it. A portfolio application hosted on my own computer. Protected by pureVpn with a bash script that monitors and repairs the vpn connection",
     "date": "15/07/2018",
     "link": "https://github.com/jozsefmorrissey/aboutMe"
 },{
@@ -182,7 +160,7 @@
       "SQL",
       "JUnit"
     ],
-    "desc": "Only have the backend mostly finished. I'm sure it is difficult to tell from the code base, but the end goal is to turn life into a video game.",
-    "date": "15/09/2018",
+    "desc": "I only have the back-end mostly finished. I'm sure it is difficult to tell from the code base, but the end goal is to create an application with an interface that turns life into a role playing video game.",
+    "date": "15/09/2017",
     "link": "https://github.com/jozsefmorrissey/CharacterBuilderJava"
 }]

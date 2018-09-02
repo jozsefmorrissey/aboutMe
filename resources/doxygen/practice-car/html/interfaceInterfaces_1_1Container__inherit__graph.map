@@ -1,0 +1,9 @@
+<map id="Interfaces.Container" name="Interfaces.Container">
+<area shape="rect" id="node2" href="$classCars_1_1ContainerPart.html" title="Cars.ContainerPart" alt="" coords="204,107,339,133"/>
+<area shape="rect" id="node8" href="$classPowerTrainParts_1_1Motor.html" title="PowerTrainParts.Motor" alt="" coords="193,157,349,184"/>
+<area shape="rect" id="node3" href="$classBrakeParts_1_1MasterCylinder.html" title="BrakeParts.MasterCylinder" alt="" coords="405,5,584,32"/>
+<area shape="rect" id="node4" href="$classDriveTrainParts_1_1Transmission.html" title="DriveTrainParts.Transmission" alt="" coords="397,56,592,83"/>
+<area shape="rect" id="node5" href="$classElectricalParts_1_1Battery.html" title="ElectricalParts.Battery" alt="" coords="418,107,571,133"/>
+<area shape="rect" id="node6" href="$classFuelSystemParts_1_1Tank.html" title="FuelSystemParts.Tank" alt="" coords="417,157,573,184"/>
+<area shape="rect" id="node7" href="$classSuspensionParts_1_1Tire.html" title="SuspensionParts.Tire" alt="" coords="421,208,568,235"/>
+</map>

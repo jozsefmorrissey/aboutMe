@@ -1,1 +1,299 @@
-character-builder-java
+<div>
+  <p>
+    <b class='sub-title'>If you are here for examples of my work...</b>
+    <ul>
+      <li>
+        <b><u>SQL</u></b>
+        <br>
+        Here is a
+        <a target="_blank"
+          href="/resources/html/charBuildDBSchema.html">
+          DB Schema</a>.
+        <br>
+        To view what I have written, check out this
+        <a target="_blank"
+          href='https://github.com/jozsefmorrissey/CharacterBuilderJava/tree/master/Setup%20files/DATA%20BASE'>
+          directory</a>.
+        The files are numbered since I bundle them using the following cmds:
+        <ul>
+          <li>
+            <b>Empty DB Setup:</b> cat OracleDB/*.sql > OracleDBSimpleSetup.sql
+          </li>
+          <li>
+            <b>Populated DB Setup</b> cat OracleDB/*.sql OracleDB/PopulateData/*.sql > OracleDBPopulateData.sql
+          </li>
+        </ul>
+        <br>
+        The functions are worth looking into these are a few highlights:
+        <ul>
+          <li>
+            <b>FUNCTION GET_ALL_LINKS -</b>
+            I want to allow the users to identify people they claim are using
+            multiple profiles. This function finds those links within the DB to
+            avoid the need to transmit all the data.
+          </li>
+          <li>
+            <b>CONCATINATE_DESCRIPTIONS -</b>
+            This helps to avoid restricting the size of a description within the
+            database while preventing large memory allocations to small bits of
+            information. This function is generalized so that all three tables,
+            event, user, and skill description, can have as long of a
+            description as the Java will allow (it is restricted in
+            <a target="_blank"
+              href='https://github.com/jozsefmorrissey/CharacterBuilderJava/blob/master/SpringBoot/src/main/resources/charBuild.properties'>
+              charBuild.properties</a>)
+          </li>
+        </ul>
+      </li>
+      <br>
+      <li>
+        <b><u>Inheritance</u></b>
+        <br>
+        I went a little extreme with inheritance on this project. I know my
+        current employer wouldn’t pay me to do this type of work. However, they
+        would be smart to do so. By spending time mapping classes to each other,
+        I have isolated and generalized the most complex aspects of this
+        application, which means easy system-wide fixes and improved
+        maintainability. Inheritance with spring entities and JPARepo's is not
+        easy. I’ve since created a
+        <a target="_blank"
+          href='/resources/html/DescriptionInheritance.html'>
+          Document
+        </a>
+        in which I can visualize my work
+        and refer to it for future reference. The document links to some of the
+        more complex examples, but with a quick glance, it’s clear the whole
+        application relies heavily on inheritance.
+      </li>
+      <br>
+      <li>
+        <b><u>JUnit</u></b>
+        <br>
+        Testing is great! JUnit is a powerful and easy to use framework. I know
+        I can run my tests and verify that my application is working at any
+        point. I’ve thoroughly tested the existing service layer with one or two
+        exceptions. Some classes are still under construction. To check out the
+        code click
+        <a target="_blank"
+          href='https://github.com/jozsefmorrissey/CharacterBuilderJava/tree/master/SpringBoot/src/test/java/com/characterBuilder/services'>
+          here</a>.
+      </li>
+      <br>
+      <li>
+        <b><u>SpringMVC</u></b>
+        <br>
+        Not much to say here MVC is EZ. You can look at my rest controllers
+        <a target="_blank"
+          href='https://github.com/jozsefmorrissey/CharacterBuilderJava/tree/master/SpringBoot/src/main/java/com/characterBuilder/controllers'>
+          here</a>.
+          I only have two done, but like I said, it's the easy part. After I
+          finish JUnit testing all the services, I don’t expect to run into any
+          issues with the controllers.
+      </li>
+      <br>
+      <li>
+        <b><u>SpingAOP</u></b>
+        <br>
+        Again, not much to say about this framework, not because AOP is easy pre
+        se, it's just difficult to find appropriate applications of the concept.
+        Currently all I have implemented is logging. I’ve surrounded my
+        controllers with an AOP class with the intent of conducting user
+        authentication. I’m not sure how exactly it will work, but it will be
+        clean and secure when done.
+      </li>
+      <br>
+      <li>
+        <b><u>SpringBoot</u></b>
+        <br>
+        I love the Boot. It has spoiled me. I can't stand the complex
+        configurations at work. I prefer a server that takes one or two very
+        simple files.
+        <ol>
+          <li>
+            <a target="_blank"
+              href='https://github.com/jozsefmorrissey/CharacterBuilderJava/blob/master/SpringBoot/src/main/resources/application.properties'>
+              application.properties
+            </a>
+          </li>
+          <li>
+            <a target="_blank"
+              href='https://github.com/jozsefmorrissey/CharacterBuilderJava/blob/master/SpringBoot/src/main/java/com/characterBuilder/Application.java'>
+              Application.java
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <br>
+    <b class='sub-title'>
+      If you are interested in what I mean by turning life into a video game
+      continue reading...
+    </b>
+  </p>
+  <p>
+    There are very complex ideas behind this project. So much so, that I have a
+    hard time describing what I want to do and why I want to do it. That being
+    said, I am well aware that if your idea isn’t concrete and simple, you have
+    very little chance of your solution being useful to anyone. Let me explain...
+  </p>
+  <p>
+    Games are addictive because they restrict your possible moves to a
+    manageable number. Then you can better decide how to proceed. You are
+    almost always moving forward and accomplishing missions, tasks, quests... My
+    hope is to crowdsource, positive activities that you can do locally to
+    improve yourself and those around you.
+    <br>
+    <br>
+    <b>
+      Really I am trying to resolve the problem of waste. Wasting resources,
+      money, time, and potential.
+    </b>
+    <ol>
+      <li>
+        <b>Resources: </b> This is not a problem I wish to address
+        directly. Only a fool would think they could create a plan to allocate
+        another's resources effectively. To aid in the preservation of
+        resources, I hope my application encourages the free market. Not only
+        since effective resource allocation is an intrinsic property of the free
+        market, but because it outsources the problem to millions, hopefully
+        billions, of organic processors in the world.
+      </li>
+      <br>
+      <li>
+        <b>Money: </b> Again, my idea is not to tackle this problem head on.
+        Money and resources are one in the same. The best person to utilize
+        either effectively is the earner/owner of the money/resource.
+      </li>
+      <br>
+      <li>
+        <b>Time: </b> My worst enemy. As you can probably tell from my git repo,
+        I have a lot of ideas (most of which will never amount to anything).
+        Still, my time is used fairly productively. Instead of surfing Facebook,
+        I’m solving problems and becoming smarter. I want the application to be
+        an interface that easily shows users more productive activities located
+        near to them. I’ll go into more detail below.
+      </li>
+      <br>
+      <li>
+        <b>Potential: </b> This is very similar to time, since how we spend our
+        time, dictates how well we achieve our full potential.
+      </li>
+    </ol>
+  </p>
+  <p>
+    <b>
+      Here are some of the features of my application that I hope will help
+      achieve a more productive and happy society:
+    </b>
+    <ul>
+      <li>
+        <b>Events: </b> An event or activity is anything you would like to do
+        with other people. I don’t intend to restrict the types of events
+        (Except for active calls to violence). However, people who live close to
+        you will have the power to have your events removed. The intent of
+        productive activities will be indicated. However, no known algorithm can
+        possibly make this judgment call as well as the people around you. As
+        long as you're not surrounded by criminals.
+      </li>
+      <br>
+      <li>
+        <b>Radius: </b> "Radius of Concern" is a key feature. While advanced
+        users will be able to have their radius encompass the entire world. You
+        have to start with a small radius that encompasses no more than a couple
+        neighbors. As you engage in "Events" and build skills and ratings, the
+        distance of your radius can be increased. By limiting your scope to the
+        people around you, it helps you engage with the individuals that can
+        have the largest direct impact on your life. As you build skills, your
+        ability to collaborate with others will improve and a larger network of
+        people will become available to you.
+      </li>
+      <br>
+      <li>
+        <b>Skills: </b> Skills can really be anything. I haven’t completely
+        decided how this will be done, but my hope is to create a non-intrusive
+        interface. I would like to build a skill hierarchy with crowd-sourced
+        information. Allowing users to enter any skill, means we need to
+        generalize them so it’s understandable and useful to others trying to
+        assess the individual, while still maintaining valuable information. For
+        instance, I’m an experienced programmer. Some people may only care about
+        that fact. Others may need a Java Programmer. By having an inheritance
+        tree, it would allow other users to view your skills at a resolution
+        that is appropriate for their purposes.
+      </li>
+      <br>
+      <li>
+        <b>Rating: </b> I wrote a few equations to understand how I might
+        approach this. When you rate another user, if you possess an equivalent
+        rating, the rating you assign will be weighted relative to the rating
+        you possess. If you possess no rating your input will be counterweighted
+        but still have some value. This is a chicken or the egg problem. Users
+        without ratings have to be able to rate others or no-one would have any
+        ratings. All ratings will be displayed relative to other users. The
+        scope of users you are compared against will depend on your radius. I
+        will probably use the [Link to and explanation: Pareto distribution],
+        since it reflects reality so well and it should be easy to climb quickly
+        at the beginning, but maxing out is next to impossible.
+      </li>
+      <br>
+      <li>
+        <b>Reputation: </b> One of the most difficult parts of navigating
+        through life, is that strangers have no concept of who you are. By
+        recording the types of activities you have participated in and finding
+        clever ways to summarize this information, it will be an asset for the
+        individual as well as prospective employers, friends, or lovers... To
+        make sure the data is summarized in a useful manner there needs to be an
+        easy to use API so that third party companies can access and assess the
+        available data, allowing them to find clever ways to interpret it for
+        specific purposes.
+      </li>
+      <br>
+      <li>
+        <b>One User: </b> Ideally, I would want a single person to only be able
+        to create a single user. To avoid fraud there will be a series of checks
+        in place to ensure that no user can receive too many skills or ratings
+        in a short period of time (I still need to figure out the best way to
+        accomplish this). Either way, having a long history combined with
+        positive feedback is what good 'Characters' will possess. There’s no
+        doubt that some people will play the long con, but the more difficult it
+        is, the fewer the number of people who will be able to successfully pull
+        it off.
+      </li>
+      <br>
+      <li>
+        <b>Local Auditing: </b> The bottom up approach is the only way to truly
+        build a strong society. Nearly all the power to regulate the users is in
+        the hands of their local peers. The opinions of those with a higher
+        rated character will hold more weight. However, as in real life, a
+        critical mass of low rated characters will be able to overrule the
+        dictator.
+      </li>
+      <br>
+      <li>
+        <b>Crypto Currency: </b> This is a stretch goal and I’ll need to study
+        law and consult with lawyers to figure out how to do it. I would like to
+        give users an easy to use interface to make monetary exchanges, free of
+        the peering eye of the government. I hope this doesn't turn you off, it
+        goes back to point 1 & 2 above... No one is more capable of responsibly
+        using the resources/money of another. The only area of government I
+        support, albeit reluctantly, is national defense. The excessive wasteful
+        spending of the military is a large factor contributing to my
+        anti-government stance. National defense is important enough to overlook
+        this human rights violation, for now. The rest of their activities are
+        not.
+        <br>
+      </li>
+      <br>
+    </ul>
+  </p>
+  <p>
+    I realize this concept may be overly optimistic and naive. In a time where a
+    majority of the population prefers instant meaningless gratification over
+    truly rewarding experiences. I would not be surprised if hardly anyone used
+    the application. However, I do believe that if one or two places were able
+    to use the application as intended, the people who lived there would be so
+    much better off. Perhaps then their neighbors would start, and then their
+    neighbors’ neighbors, and so on and so forth and it could spread like
+    wildfire. There is too much untapped wealth every where in the world. We
+    just have to release a little to show the world the route to prosperity.
+  </p>
+</div>

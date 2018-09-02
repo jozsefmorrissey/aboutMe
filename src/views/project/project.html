@@ -1,4 +1,4 @@
-<div>
+<div ng-if='project'>
   <div class='title-containter'>
     <b class='title'>{{project.project}}</b>
   </div>
@@ -17,9 +17,9 @@
   <br>
   <span>
     <span class='techs' ng-repeat='tech in project.techs'>
-      <b ng-click='techInfoToggle(tech)'>{{tech}}</>
+      <b ng-click='techInfoToggle(tech)'>{{tech}}</b>
     </span>
-    <div ng-if='showTechInfo'>
+    <div ng-if='showTechInfo' class='tech-desc'>
       <ng-include src='"/resources/html/techs/" + techFilename + ".html"'></ng-include>
     </div>
   </span>

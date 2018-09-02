@@ -4,7 +4,10 @@
     text-align: center;
     border-style: groove;
     margin: 10pt;
-    min-height: 100pt;
+}
+
+.content-buffer {
+  min-height: 100pt;
 }
 
 .title {
@@ -15,6 +18,20 @@
   font-size: 18pt;
 }
 
+.large-text-body {
+  margin: 20pt;
+  border-style: groove;
+  padding: 20pt;
+  border-radius: 20pt;
+}
+
+.tech-desc {
+  margin: 0pt 30pt;
+  border-style: groove;
+  border-radius: 10pt;
+  padding: 10pt;
+}
+
 .center {
   text-align: center;
   justify-content: center;
@@ -23,6 +40,10 @@
 .upper-right {
   float: right;
   text-align: right;
+}
+
+.left {
+  text-align: left;
 }
 
 .upper-left {
@@ -59,8 +80,20 @@
   padding: 5pt;
   width: fit-content;
   margin: 5pt;
+  cursor: pointer;
   display: inline-grid;
 }
+
+.expand {
+  background-color: #dddede;
+  border-radius: 10px;
+  padding: 5pt;
+  width: fit-content;
+  margin: 5pt;
+  cursor: pointer;
+  display: inline-grid;
+}
+
 
 .indent {
   padding-left: 10pt;
@@ -71,6 +104,49 @@
   justify-content: center;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 #body {
   padding: 20pt;
+}
+
+.side-bar {
+  display: inline-block;
+}
+
+.slight-padding {
+  padding: 4pt;
+}
+
+.button {
+  padding: 0 10pt;
+  margin: 0 10pt;
+  background-color: black;
+  display: inline-block;
+  border-radius: 5pt;
+  color: silver;
+  border-color: silver;
+  border-style: ridge;
+}
+
+.close-btn {
+  padding: 0 5pt;
+  font-weight: bold;
+  border-radius: 20pt;
+}
+
+.side-by-side {
+  display: inline-flex;
+}
+
+.button:active {
+  color: #8e7c7c;
+  border-color: #8e7c7c;
+}
+
+.nav-link {
+    color: rgba(0,0,0,.5);
 }
